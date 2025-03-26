@@ -1,0 +1,25 @@
+{
+  "name": "hubspot_cert",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3scorpion11/.hubspot_cert.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3scorpion11/.hubspot_cert/issues"
+  },
+  "homepage": "https://github.com/3scorpion11/.hubspot_cert#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pug": "^3.0.3"
+  }
+}
