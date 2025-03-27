@@ -32,6 +32,43 @@ app.get("/", async (req, res) => {
     }
 })
 
+// 2. Display Form
+app.get("/update-cobj", (req, res) => {
+    res.render("form", {
+        title: "Update Custom Object Form | Integrating With HubSpot I Practicum",
+    })
+})
+
+// 3. Create new custom object
+app.post("/update-cobj", async (req, res) => {
+    const { name, publisher, price } = req.body
+
+    const url = `https://api.hubapi.com/crm/v3/objects/autos`
+    const headers = {
+        Authorization: `Bearer ${TOKEN}`,
+        "Content-Type": "application/json",
+    }
+
+    const newRecord = {
+        properties: {
+            name,
+            brand,
+            color,
+        },
+    }
+
+    try {
+        await axios.post(url, newRecord, { headers })
+        res.redirect("/")
+    } catch (error) {
+        console.error(
+            "Error creating custom object:",
+            error.response?.data || error.message
+        )
+        res.status(500).send("Error creating record")
+    }
+})
+
 // Start
 app.listen(3000, () => {
     console.log("Listening on http://localhost:3000")
