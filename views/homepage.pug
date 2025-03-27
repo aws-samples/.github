@@ -4,7 +4,9 @@ html
     title= title
     link(rel="stylesheet", href="/css/style.css")
   body
+  div(class='container')
     h1= title
+    a(href="/update-cobj") Add to this table
 
     table
       thead
@@ -18,5 +20,3 @@ html
             td= item.properties.name
             td= item.properties.brand
             td= item.properties.color
-
-    a(href="/update-cobj") Add Auto

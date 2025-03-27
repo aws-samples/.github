@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
     try {
         const response = await axios.get(url, { headers })
         const data = response.data.results
-        res.render("home", { title: "Autos List | Integrating With HubSpot I Practicum", data })
+        res.render("homepage", { title: "Autos List | Integrating With HubSpot I Practicum", data })
     }
     catch (error) {
         console.error("Error getting Autos:", error.response?.data || error.message)
