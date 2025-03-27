@@ -33,14 +33,14 @@ app.get("/", async (req, res) => {
 })
 
 // 2. Display Form
-app.get("/update-cobj", (req, res) => {
+app.get("/update", (req, res) => {
     res.render("form", {
         title: "Update Custom Object Form | Integrating With HubSpot I Practicum",
     })
 })
 
 // 3. Create new custom object
-app.post("/update-cobj", async (req, res) => {
+app.post("/update", async (req, res) => {
     const { name, publisher, price } = req.body
 
     const url = `https://api.hubapi.com/crm/v3/objects/autos`
