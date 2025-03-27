@@ -31,3 +31,8 @@ app.get("/", async (req, res) => {
         res.status(500).send("Error getting Autos")
     }
 })
+
+// Start
+app.listen(3000, () => {
+    console.log("Listening on http://localhost:3000")
+})
