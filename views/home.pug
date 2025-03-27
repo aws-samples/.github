@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+
+    table
+      thead
+        tr
+          th Name
+          th Brand
+          th Color
+      tbody
+        each item in data
+          tr
+            td= item.properties.name
+            td= item.properties.brand
+            td= item.properties.color
