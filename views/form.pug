@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+
+    form(method="POST", action="/update-cobj")
+      div
+        label(for="name") Name:
+        input(type="text", name="name", required=true)
+      div
+        label(for="brand") Brand:
+        input(type="text", name="brand", required=true)
+      div
+        label(for="color") Color:
+        input(type="text", name="color", required=true)
+      button(type="submit") Submit
+
+    a(href="/") Back to the home
