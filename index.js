@@ -41,7 +41,7 @@ app.get("/update", (req, res) => {
 
 // 3. Create new custom object
 app.post("/update", async (req, res) => {
-    const { name, publisher, price } = req.body
+    const { name, brand, color } = req.body
 
     const url = `https://api.hubapi.com/crm/v3/objects/autos`
     const headers = {
